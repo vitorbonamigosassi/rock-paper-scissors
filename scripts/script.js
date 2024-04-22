@@ -9,7 +9,6 @@ function getComputerChoice() {
     let chosen = choice[Math.floor(Math.random() * choice.length)];
     return comp.textContent = "" + chosen;
 }
-getComputerChoice();
 
 function chooseRock() {
     playerChoice = "Rock";
