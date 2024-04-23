@@ -10,14 +10,17 @@
     <h1>Rock Paper Scissors</h1>
     <hr>
     <h2>Choose one:</h2>
-    <!-- <button id="rock" onclick="chooseRock()">Rock</button> -->
     <button onclick="getPlayerChoice('Rock')">Rock</button>
     <button onclick="getPlayerChoice('Paper')">Paper</button>
     <button onclick="getPlayerChoice('Scissors')">Scissors</button>
     <p>The computer chooses: <span id="computerChoice">*Secret*</span></p>
     <p>You choose: <span id="playerChoice"></span></p>
+    <h2>Result:</h2>
+    <p id="result">Choose an option above!</p>
     <hr>
-    
+    <p>Computer score: <span id="computerScore">0</span></p>    
+    <p>Your score: <span id="playerScore">0</span></p>
+
     <script src="scripts/script.js"></script>
 </body>
 </html>
