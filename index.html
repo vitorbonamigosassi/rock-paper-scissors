@@ -10,7 +10,7 @@
     <h1>Rock Paper Scissors</h1>
     <hr>
     <h2>Choose one:</h2>
-    <button onclick="getPlayerChoice('Rock')">Rock</button>
+    <button id="btn" onclick="getPlayerChoice('Rock')">Rock</button>
     <button onclick="getPlayerChoice('Paper')">Paper</button>
     <button onclick="getPlayerChoice('Scissors')">Scissors</button>
     <p>The computer chooses: <span id="computerChoice">*Secret*</span></p>
@@ -20,6 +20,7 @@
     <hr>
     <p>Computer score: <span id="computerScore">0</span></p>    
     <p>Your score: <span id="playerScore">0</span></p>
+    <button id="restartBtn" onclick="restartGame()">Restart</button>
 
     <script src="scripts/script.js"></script>
 </body>
