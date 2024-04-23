@@ -1,13 +1,17 @@
-console.clear();
 const comp = document.getElementById("computerChoice");
 const player = document.getElementById("playerChoice");
 const result = document.getElementById("result");
 const compScore = document.getElementById("computerScore");
 const playScore = document.getElementById("playerScore");
+const restart = document.getElementById("restartBtn");
+const buttons = document.querySelectorAll("button");
 
 const choice = ["Rock", "Paper", "Scissors"];
+
 let computerScore = 0;
 let playerScore = 0;
+
+restart.disabled = true;
 
 function getComputerChoice() {
     const computerChosen = choice[Math.floor(Math.random() * choice.length)];
@@ -28,7 +32,7 @@ function playRound(computerSelection, playerSelection) {
                 result.textContent = "Too bad, Paper beats Rock";
                 computerScore++;
             } else {
-                result.textContent = "Congratulations! Rock beats Scissors";
+                result.textContent = "Correct! Rock beats Scissors";
                 playerScore++;
             }
             break;
@@ -39,7 +43,7 @@ function playRound(computerSelection, playerSelection) {
                 result.textContent = "Too bad, Scissors beats Paper";
                 computerScore++;
             } else {
-                result.textContent = "Congratulations! Paper beats Rock";
+                result.textContent = "Correct! Paper beats Rock";
                 playerScore++;
             }
             break;
@@ -50,24 +54,46 @@ function playRound(computerSelection, playerSelection) {
                 result.textContent = "Too bad, Rock beats Scissors";
                 computerScore++;
             } else {
-                result.textContent = "Congratulations! Scissors beats Paper";
+                result.textContent = "Correct! Scissors beats Paper";
                 playerScore++;
             }
             break;
         default:
             console.log("Default");
     }
-    // updateScore();
+    updateScore();
 
 }
 
-// function updateScore() {
-//     do {
-//         compScore.textContent = computerScore;
-//         playScore.textContent = playerScore;
-//     } while (computerScore < 5 || playerScore < 5)
+function updateScore() {
+    playScore.textContent = playerScore;
+    compScore.textContent = computerScore;
 
-//     if (computerScore === 5) {
+    if (computerScore === 5) {
+        result.textContent = "Weee, you loose :c";
+        gameOver();
+    } else if (playerScore === 5) {
+        result.textContent = "Congratulations, you won!";    
+        gameOver();
+    }
+}
 
-//     }
-// }
+function gameOver() {
+    for (let i = 0; i < buttons.length; i++) {
+        buttons[i].disabled = true;
+    }
+    restart.disabled = false;
+
+}
+
+function restartGame() {
+    for (let i = 0; i < buttons.length; i++) {
+        buttons[i].disabled = false;
+    }
+    restart.disabled = true;
+    playerScore = 0;
+    computerScore = 0;
+    playScore.textContent = playerScore;
+    compScore.textContent = computerScore;
+    result.textContent = "Choose an option above!";
+}
