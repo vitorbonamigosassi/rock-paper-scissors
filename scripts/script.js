@@ -73,7 +73,7 @@ function updateScore() {
         result.textContent = "Weee, you loose :c";
         gameOver();
     } else if (playerScore === 5) {
-        result.textContent = "Congratulations, you won!";    
+        result.textContent = "Congratulations, you won!";
         gameOver();
     }
 }
