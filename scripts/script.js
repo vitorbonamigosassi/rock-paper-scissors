@@ -6,25 +6,12 @@ const player = document.getElementById("playerChoice");
 let playerChoice = "";
 
 function getComputerChoice() {
-    let chosen = choice[Math.floor(Math.random() * choice.length)];
-    return comp.textContent = "" + chosen;
+    let computerChosen = choice[Math.floor(Math.random() * choice.length)];
+    return comp.textContent = "" + computerChosen;
 }
+getComputerChoice();
 
-function chooseRock() {
-    playerChoice = "Rock";
-    player.textContent = "" + playerChoice;
+function getPlayerChoice(playerChosen) {
+    console.log(playerChosen);
+    return player.textContent = "" + playerChosen;
 }
-
-function choosePaper() {
-    playerChoice = "Paper";
-    player.textContent = "" + playerChoice;
-}
-
-function chooseScissors() {
-    playerChoice = "Scissors";
-    player.textContent = "" + playerChoice;
-}
-
-// function getPlayerChoice(choice[option]) {
-
-// }
