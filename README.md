@@ -4,6 +4,8 @@ A "The Odin Project" assignment.
 
 In this lesson i'm creating a mini-game you play with the computer.
 
+[Access the live preview!](https://vitorbonamigosassi.github.io/rock-paper-scissors/)
+
 ## Instructions
 You are given three choices to pick from: "Rock", "Paper" or "Scissors", and the computer is also assigned one of the three at random.
 
